@@ -8,9 +8,13 @@ import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import Statistics from "@/components/Statistics";
+
 export default function Homepage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main
+      className="min-h-screen bg-slate-950 text-white"
+      data-preview="true"
+    >
       <ScrollProgress />
       <Navbar />
       <Hero />

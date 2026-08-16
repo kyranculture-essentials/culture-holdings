@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,81 +15,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cultureholdings.vercel.app"),
-
-  title: "Culture Holdings Ltd | Building Sustainable African Enterprises",
-
+  title: "Culture Holdings | Building African Enterprise",
   description:
-    "Culture Holdings Ltd is an African investment company developing sustainable enterprises across commercial agriculture, responsible mineral trading, construction, real estate and international trade.",
-
-  keywords: [
-    "Culture Holdings",
-    "Culture Holdings Ltd",
-    "African investment company",
-    "Uganda investment company",
-    "East Africa business",
-    "Commercial agriculture",
-    "Responsible mineral trading",
-    "Construction",
-    "Real estate",
-    "International trade",
-    "Strategic partnerships",
-    "Investment Africa",
-  ],
-
-  authors: [
-    {
-      name: "Culture Holdings Ltd",
-    },
-  ],
-
-  creator: "Culture Holdings Ltd",
-  publisher: "Culture Holdings Ltd",
-
+    "Culture Holdings is an African enterprise and investment company creating long-term value through responsible investment, strategic partnerships and sustainable growth.",
+  metadataBase: new URL("https://culture-holdings-7ik3.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
   },
-
-  openGraph: {
-    title: "Culture Holdings Ltd | Building African Enterprise",
-
-    description:
-      "Creating long-term value through sustainable investments, strategic partnerships and enterprise development across Africa.",
-
-    url: "https://cultureholdings.vercel.app",
-
-    siteName: "Culture Holdings Ltd",
-
-    locale: "en_US",
-
-    type: "website",
-
-    images: [
-      {
-        url: "/og/culture-holdings-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Culture Holdings Ltd",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-
-    title: "Culture Holdings Ltd",
-
-    description:
-      "Building sustainable African enterprises through strategic investment and partnerships.",
-
-    images: ["/og/culture-holdings-og.png"],
-  },
-
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
@@ -101,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen bg-slate-950 text-white antialiased">
         {children}
 
         <Analytics />

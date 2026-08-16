@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cultureholdings.vercel.app";
+  const baseUrl = "https://culture-holdings-7ik3.vercel.app";
 
   return [
     {
@@ -11,28 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#business`,
+      url: `${baseUrl}/leadership`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#investment`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
     },
   ];
 }
